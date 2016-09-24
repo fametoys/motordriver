@@ -1,5 +1,5 @@
 # Please refer to the licensing terms stated in the README.md section of
-# https://github.com/hummingworksllc/motordriver
+# https://github.com/fametoys/motordriver
 
 import RPi.GPIO as GPIO, Tkinter
 
