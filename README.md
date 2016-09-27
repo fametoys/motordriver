@@ -4,7 +4,7 @@ In this GitHub website here, you can download the sample code "MotorDriver.py" f
 
 Are you ready to play with your engine now?
 
-First of all, you can find useful videos at www.fame.toys/learn/ webpage. 
+First of all, you can find useful videos at www.fame.toys/learn/pi/ webpage. 
 Watch these videos to complete each steps for playing with your engine.
 When you watch these videos and get your Raspberry Pi ready to play, you can copy this sample code file to your Raspberry Pi.
 Also make your engine ready by placing the motor shield on your Raspberry Pi and connect the battery to turn it on!
