@@ -1,6 +1,6 @@
 Hello Fame Toys (R) fans!
 
-In this GitHub website here, you can download the sample code "MotorDriver.py" file to your Raspberry Pi.
+In this GitHub website here, you can download the sample code file to your Raspberry Pi.
 
 Are you ready to play with your engine now?
 
