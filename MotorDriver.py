@@ -1,7 +1,18 @@
-# Please kindly refer to the licensing terms stated in the README.md section of 
+# Please refer to the licensing terms stated in the README.md section of 
 # https://github.com/fametoys/motordriver
 
-import RPi.GPIO as GPIO, Tkinter
+import RPi.GPIO as GPIO
+from Tkinter import *
+
+root = Tk()
+root.title("Motor Driver")
+root.geometry("300x100")
+
+spd = IntVar()
+spd.set(0)
+
+dr = IntVar()
+dr.set(1)
 
 leftForward = 36
 leftReverse = 35
@@ -29,16 +40,6 @@ def init():
     RR = GPIO.PWM(rightReverse, 20)
     RR.start(0)
 
-def cleanup():
-    stop()
-    GPIO.cleanup()
-
-def stop():
-    LF.ChangeDutyCycle(0)
-    LR.ChangeDutyCycle(0)
-    RF.ChangeDutyCycle(0)
-    RR.ChangeDutyCycle(0)
-
 def forward(speed):
     LF.ChangeDutyCycle(speed)
     LR.ChangeDutyCycle(0)
@@ -55,31 +56,15 @@ def reverse(speed):
     LR.ChangeFrequency(speed + 5)
     RR.ChangeFrequency(speed + 5)
 
-def spinLeft(speed):
+def stop():
     LF.ChangeDutyCycle(0)
-    LR.ChangeDutyCycle(speed)
-    RF.ChangeDutyCycle(speed)
-    RR.ChangeDutyCycle(0)
-    LR.ChangeFrequency(speed + 5)
-    RF.ChangeFrequency(speed + 5)
-
-def spinRight(speed):
-    LF.ChangeDutyCycle(speed)
     LR.ChangeDutyCycle(0)
     RF.ChangeDutyCycle(0)
-    RR.ChangeDutyCycle(speed)
-    LF.ChangeFrequency(speed + 5)
-    RR.ChangeFrequency(speed + 5)
+    RR.ChangeDutyCycle(0)
 
-root = Tkinter.Tk()
-
-init()
-
-spd = Tkinter.IntVar()
-spd.set(0)
-
-dr = Tkinter.IntVar()
-dr.set(1)
+def cleanup():
+    stop()
+    GPIO.cleanup()
 
 def change_spd(s):
     if(dr.get() == 0):
@@ -87,7 +72,7 @@ def change_spd(s):
         lbl.config(text = 'Speed = %.2f' % spd.get())
     elif(dr.get() == 1):
         stop()
-        lbl.config(text = 'Stop')
+        lbl.config(text = 'Direction: Stop')
     elif(dr.get() == 2):
         reverse(spd.get())
         lbl.config(text = 'Speed = %.2f' % spd.get())
@@ -96,23 +81,25 @@ def change_dr(d):
     if(dr.get() == 0):
         stop()
         spd.set(0)
-        lbl.config(text = 'Forward')
+        lbl.config(text = 'Direction: Forward')
     elif(dr.get() == 1):
         stop()
         spd.set(0)
-        lbl.config(text = 'Stop')
+        lbl.config(text = 'Direction: Stop')
     elif(dr.get() == 2):
         stop()
         spd.set(0)
-        lbl.config(text = 'Reverse')
+        lbl.config(text = 'Direction: Reverse')
 
-lbl = Tkinter.Label(root, text = 'Speed = %.2f' % spd.get())
+init()
+
+lbl = Label(root, text = 'Speed = %.2f' % spd.get())
 lbl.pack()
 
-drSlider = Tkinter.Scale(root, label = 'Direction', orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
+drSlider = Scale(root, label = 'Direction', length = 100, orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
 drSlider.pack()
 
-spdSlider = Tkinter.Scale(root, label = 'Speed', orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
+spdSlider = Scale(root, label = 'Speed', length = 250, orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
 spdSlider.pack()
 
 root.mainloop()
