@@ -2,12 +2,12 @@ Hello Fame Toys (R) fans!
 
 In this GitHub website here, you can download the sample code file to your Raspberry Pi.
 
-Are you ready to play with your engine now?
+Are you ready to play with your Fame Toys (R) model kit now?
 
-First of all, you can find useful videos at www.fame.toys/master/pi/ webpage. 
-Watch these videos to complete each steps for playing with your engine.
+First, you can find useful videos at www.fame.toys/master/pi/ webpage. 
+Watch these videos to complete each steps for playing with your model.
 When you watch these videos and get your Raspberry Pi ready to play, you can copy this sample code file to your Raspberry Pi.
-Also make your engine ready by placing the motor shield on your Raspberry Pi and connect the battery to turn it on!
+Also make your model ready by placing the motor shield on your Raspberry Pi and connect the battery to turn it on!
 
 
 
