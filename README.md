@@ -2,7 +2,7 @@ Hello Fame Toys® fans!
 
 In this GitHub website, you can download the sample code file "MotorDriver.py" to your Raspberry Pi.
 
-Are you ready to play with your Fame Toys® model kit now?
+Are you ready to play with your Fame Toys® model now?
 
 First, you can find useful videos at www.fame.toys/master/pi/ webpage. 
 Watch these videos to complete each steps for playing with your model.
