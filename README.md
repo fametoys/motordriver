@@ -1,14 +1,14 @@
-Hello Fame Toys (R) fans!
+Hello Fame Toys® fans!
 
-In this GitHub website here, you can download the sample code file to your Raspberry Pi.
+In this GitHub website, you can download the sample code file "MotorDriver.py" to your Raspberry Pi.
 
-Are you ready to play with your Fame Toys (R) model kit now?
+Are you ready to play with your Fame Toys® model kit now?
 
 First, you can find useful videos at www.fame.toys/master/pi/ webpage. 
 Watch these videos to complete each steps for playing with your model.
-When you watch these videos and get your Raspberry Pi ready to play, you can copy this sample code file to your Raspberry Pi.
-Also make your model ready by placing the motor shield on your Raspberry Pi and connect the battery to turn it on!
-
+Place the motor shield on your Raspberry Pi, put them in your model, and connect the battery to turn it on!
+When you watch the videos and get your Raspberry Pi ready to play, you can download this sample code file to your Raspberry Pi desktop.
+Enjoy!
 
 
 License
