@@ -6,7 +6,7 @@ from Tkinter import *
 
 root = Tk()
 root.title("Motor Driver")
-root.geometry("400x300")
+root.geometry("300x100")
 
 spd = IntVar()
 spd.set(0)
@@ -72,7 +72,7 @@ def change_spd(s):
         lbl.config(text = 'Speed = %.2f' % spd.get())
     elif(dr.get() == 1):
         stop()
-        lbl.config(text = 'Stop')
+        lbl.config(text = 'Direction: Stop')
     elif(dr.get() == 2):
         reverse(spd.get())
         lbl.config(text = 'Speed = %.2f' % spd.get())
@@ -81,25 +81,25 @@ def change_dr(d):
     if(dr.get() == 0):
         stop()
         spd.set(0)
-        lbl.config(text = 'Forward')
+        lbl.config(text = 'Direction: Forward')
     elif(dr.get() == 1):
         stop()
         spd.set(0)
-        lbl.config(text = 'Stop')
+        lbl.config(text = 'Direction: Stop')
     elif(dr.get() == 2):
         stop()
         spd.set(0)
-        lbl.config(text = 'Reverse')
+        lbl.config(text = 'Direction: Reverse')
 
 init()
 
-lbl = Tkinter.Label(root, text = 'Speed = %.2f' % spd.get())
+lbl = Label(root, text = 'Speed = %.2f' % spd.get())
 lbl.pack()
 
-drSlider = Tkinter.Scale(root, label = 'Direction', width = 300, orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
-drSlider.pack()
+drSlider = Scale(root, label = 'Direction', orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
+drSlider.pack(fill = 'both')
 
-spdSlider = Tkinter.Scale(root, label = 'Speed', width = 300, orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
-spdSlider.pack()
+spdSlider = Scale(root, label = 'Speed', orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
+spdSlider.pack(fill = 'both')
 
 root.mainloop()
