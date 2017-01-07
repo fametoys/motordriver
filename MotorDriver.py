@@ -96,10 +96,16 @@ init()
 lbl = Label(root, text = 'Speed = %.2f' % spd.get())
 lbl.pack()
 
-drSlider = Scale(root, label = 'Direction', length = 100, orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
+lbldr = Label(root, text = 'Direction')
+lbldr.pack()
+
+drSlider = Scale(root, length = 100, orient = 'h', from_ = 0, to = 2, showvalue = False, variable = dr, command = change_dr)
 drSlider.pack()
 
-spdSlider = Scale(root, label = 'Speed', length = 250, orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
+lblspd = Label(root, text = 'Speed')
+lblspd.pack()
+
+spdSlider = Scale(root, length = 250, orient = 'h', from_ = 0, to = 100, showvalue = False, variable = spd, command = change_spd)
 spdSlider.pack()
 
 root.mainloop()
