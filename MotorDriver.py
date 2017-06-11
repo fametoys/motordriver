@@ -2,7 +2,7 @@
 # https://github.com/fametoys/motordriver
 
 import RPi.GPIO as GPIO
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 root.title("Motor Driver")
