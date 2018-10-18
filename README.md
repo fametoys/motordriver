@@ -1,12 +1,12 @@
 # Hello Fame Toys® fans!
 
-In this GitHub web page, you can download the sample code file "MotorDriver.py" to your Raspberry Pi.
+In this GitHub web page, you can download the sample code file "MotorDriver.py" to your Raspberry Pi's micro-SD card.
 
-First of all, you can find useful videos at www.fame.toys/master/ and complete steps so that your Raspberry Pi is ready for playing with your Fame Toys® model. Once you watch the videos and get your Raspberry Pi ready to play, you can download this sample code file to your Raspberry Pi desktop.
+First of all, you can find useful videos at www.fame.toys and complete steps so your Raspberry Pi is ready for playing with your Fame Toys® Bridger Trains model. Once you watch the videos and get your Raspberry Pi ready to play, you can download this sample code file to your Raspberry Pi desktop.
 
 # Are you ready? 
 
-Hook up the motor driver shield on top of Raspberry Pi. Connect a DC motor to Motor 1 output and another DC motor to Motor 2 output of the motor driver shield. Place the batteries to the battery holder and connect it to the motor driver shield to turn on Raspberry Pi. Put all the electronics into your model. Download this file on Raspberry Pi desktop and run it.
+Hook up Robohat on top of Raspberry Pi. Connect a DC motor to Robohat's Motor 1 output and another DC motor to Robohat's Motor 2 output. Place the x6 AA single-use batteries to the battery holder and connect it to Robohat to turn on Raspberry Pi. Put all the electronics into your model. Download this file on Raspberry Pi desktop and run it.
 
 Enjoy!
 
