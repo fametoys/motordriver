@@ -1,5 +1,8 @@
+# Copyright 2018 HUMMINGWORKS LLC All Rights Reserved.
+
 import RPi.GPIO as GPIO
 from tkinter import *
+import time
 
 root = Tk()
 root.title("Motor Driver")
@@ -78,14 +81,17 @@ def change_dr(d):
     if(dr.get() == 0):
         stop()
         spd.set(0)
+        time.sleep(0.8)
         lbl.config(text = 'Direction: Forward')
     elif(dr.get() == 1):
         stop()
         spd.set(0)
+        time.sleep(0.8)
         lbl.config(text = 'Direction: Stop')
     elif(dr.get() == 2):
         stop()
         spd.set(0)
+        time.sleep(0.8)
         lbl.config(text = 'Direction: Reverse')
 
 init()
